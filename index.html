@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIS Executive Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+        }
+        .navbar {
+            background-color: #004d40;
+        }
+        .navbar-brand, .nav-link {
+            color: #ffffff !important;
+        }
+        .header {
+            background-image: url('https://via.placeholder.com/1920x400?text=Geographic+Theme');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            position: relative;
+        }
+        .header h1 {
+            font-size: 3rem;
+            z-index: 2;
+        }
+        .header .photo {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            z-index: 2;
+            border: 5px solid white;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .header .photo img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+        .projects img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        footer {
+            background-color: #004d40;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a> 
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Certifications">Certifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#connect-with-me">Connect With Me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- Header Section -->
+<header class="header" id="home">
+    <h1 class="animated-text">Sagar Saha</h1>
+    <div class="photo">
+        <img src="image.jpeg" alt="LinkedIn">
+    </div>
+    <p class="header-paragraph"></p>
+</header>
+
+<style>
+    .header {
+        position: relative;
+        height: 60vh; /* Adjusted to match map size */
+        background-size: contain; /* Ensures the whole map is visible */
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: background-image 1s ease-in-out;
+    }
+    
+
+    .header .photo {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        z-index: 2;
+        border: 5px solid white;
+        border-radius: 50%;
+        overflow: hidden;
+        width: 300px;
+        height: 300px;
+    }
+    
+    .header .photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+
+<script>
+    const images = [
+        'map1.jpg', 'map2.jpg', 'map3.jpg', 'map4.jpg', 'map5.jpg',
+        'map6.jpg', 'map7.jpg', 'map8.jpg', 'map9.jpg', 'map10.jpg'
+    ];
+    let i = 0;
+    setInterval(() => {
+        document.querySelector('.header').style.backgroundImage = `url('${images[i]}')`;
+        i = (i + 1) % images.length;
+    }, 5000);
+</script>
+
+
+   <!-- Skill Section -->
+<section class="skills py-5" id="skills">
+    <div class="container">
+        <h2 class="text-center mb-4">Skills</h2>
+        <div class="row text-center">
+            <div class="col-md-3 col-sm-6 mb-4">
+                <img src="arcgis-pro-logo.png" alt="ArcGIS Pro Logo" class="skill-img mb-2">
+                <h5>ArcGIS Pro</h5>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <img src="arcgis-gis-software.png" alt="ArcMap 10.4 Logo" class="skill-img mb-2">
+                <h5>ArcMap 10.4</h5>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <img src="Q-gis.png" alt="QGIS Logo" class="skill-img mb-2">
+                <h5>QGIS</h5>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <img src="Arc-phy.PNG" alt="ArcPy Logo" class="skill-img mb-2">
+                <h5>ArcPy</h5>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <img src="Erdas.jfif" alt="Erdas Logo" class="skill-img mb-2">
+                <h5>Erdas</h5>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <img src="Html.png" alt="HTML Logo" class="skill-img mb-2">
+                <h5>HTML</h5>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <img src="Javascript.png" alt="JavaScript Logo" class="skill-img mb-2">
+                <h5>JavaScript</h5>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <img src="Css.png" alt="CSS Logo" class="skill-img mb-2">
+                <h5>CSS</h5>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <img src="Bootstarp.png" alt="Bootstrap Logo" class="skill-img mb-2">
+                <h5>Bootstrap</h5>
+            </div>
+        </div>
+    </div>
+    <style>
+        /* Style for skill container */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; /* Space between items */
+        }
+    
+        /* Style for individual skill items */
+        .skill-item {
+            text-align: center;
+            width: 120px; /* Fixed width for uniformity */
+        }
+    
+        /* Style for skill images */
+        .skill-img {
+            width: 100px; /* Set consistent width */
+            height: 100px; /* Set consistent height */
+            object-fit: contain; /* Maintain aspect ratio within the box */
+            border: 2px solid #ddd; /* Optional: Add a border for a cleaner look */
+            border-radius: 10px; /* Optional: Rounded corners for style */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Subtle shadow */
+            margin-bottom: 10px; /* Space between image and text */
+            transition: transform 0.3s ease; /* Animation effect on hover */
+        }
+    
+        /* Hover effect for images */
+        .skill-img:hover {
+            transform: scale(1.1); /* Slight zoom on hover */
+        }
+    
+        /* Style for skill text */
+        .skill-text {
+            font-size: 14px; /* Text size */
+            font-weight: bold;
+            color: #333; /* Text color */
+        }
+    </style>
+</section>
+
+      <!-- Experience Section -->
+      <section class="experience py-5" id="experience">
+        <div class="container">
+            <h2 class="text-center mb-4">Experience</h2>
+            <div class="experience-item mb-4 d-flex align-items-start">
+                <div class="company-logo me-3">
+                    <img src="flodata.jfif" alt="FloData Analytics Logo">
+                </div>
+                <div>
+                    <h3><a href="https://flodataanalytics.com/" target="_blank">FloData Analytics</a></h3>
+                    <h5>GIS Executive</h5>
+                    <p><strong>Duration: </strong> November 2022 - Present</p>
+                    <p><strong>Location: </strong> Delhi, India</p>
+                    <ul>
+                        <li>Prepared Khasra maps for Delhi villages and Laldora, supporting land-related projects.</li>
+                        <li>Created detailed industrial area maps for urban planning and development.</li>
+                        <li>Managed land-related data for zoning, land acquisition, and infrastructure planning.</li>
+                        <li>Proficiently handled GIS tools for drafting maps and bathymetry analysis.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="experience-item mb-4 d-flex align-items-start">
+                <div class="company-logo me-3">
+                    <img src="cyberswift-lams-software.png" alt="cyberswift-lams-software Logo">
+                </div>
+                <div>
+                    <h3><a href="https://www.cyberswift.com/in" target="_blank">CyberSWIFT Infotech Pvt. Ltd.</a></h3>
+                    <h5>Sr. Digitizer</h5>
+                    <p><strong>Duration: </strong> November 2022 - July 2024</p>
+                    <h5>Digitizer Trainee</h5>
+                    <p><strong>Duration: </strong> August 2021 - October 2024</p>
+                    <p><strong>Location: </strong> Kolkata, India</p>
+                    <ul>
+                        <li>Executed premises digitization and water network drawing with quality checks and progress tracking.</li>
+                        <li>Managed plot digitization, number entry, and quality assurance processes.</li>
+                        <li>Planned tasks, deployed teams, and handled client interactions efficiently.</li>
+                        <li>Performed SLD-wise network digitization, HT-LT network mapping, and land base query validation.</li>
+                        <li>Supported data migration, feeder checks, and ensured accuracy in GIS operations.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+        /* General Styling */
+        .experience-item {
+            display: flex;
+            gap: 15px; /* Space between logo and text */
+            align-items: flex-start;
+        }
+        
+        /* Company Logo Styling */
+        .company-logo img {
+            width: 60px; /* Set uniform width for logos */
+            height: 60px; /* Set uniform height for logos */
+            object-fit: contain; /* Maintain the aspect ratio of logos */
+            border: 2px solid #ddd; /* Optional: Add a subtle border */
+            border-radius: 8px; /* Optional: Rounded corners */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation on hover */
+            cursor: pointer;
+            position: relative;
+        }
+        
+        /* Logo Hover Effects */
+        .company-logo img:hover {
+            transform: scale(1.1); /* Slight zoom-in effect */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
+        }
+        
+        /* Tooltip Styling */
+        .company-logo {
+            position: relative; /* Position for tooltip */
+        }
+        
+        .company-logo img:hover::after {
+            content: attr(alt); /* Display the alt text as tooltip */
+            position: absolute;
+            bottom: -35px; /* Position tooltip below the image */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #000; /* Tooltip background color */
+            color: #fff; /* Tooltip text color */
+            padding: 5px 10px; /* Padding for the tooltip */
+            border-radius: 5px; /* Rounded tooltip corners */
+            font-size: 12px; /* Tooltip font size */
+            white-space: nowrap; /* Prevent text wrapping */
+            z-index: 10; /* Ensure tooltip appears above other elements */
+            opacity: 1; /* Make tooltip visible */
+            transition: opacity 0.3s ease; /* Smooth fade-in effect */
+        }
+        
+        /* Ensure Tooltip Disappears When Not Hovered */
+        .company-logo img::after {
+            opacity: 0;
+        }
+        </style>
+
+    <!-- Education Section -->
+    <section class="education py-5 bg-light" id="education">
+         <div class="container">
+            <h2 class="text-center mb-4">Education</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Degree</th>
+                            <th>Institution</th>
+                            <th>Year</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>M.Sc. in Remote Sensing & GIS</td>
+                            <td>
+                                <a href="https://www.jisuniversity.ac.in/" target="_blank">JIS University </a></td> 
+                            <td>2023</td>
+                            <td>Specialized in spatial analysis and mapping technologies.</td>
+                        </tr>
+                        <tr>
+                            <td>B.Sc. in Geography</td>
+                            <td><a href="https://www.caluniv.ac.in/" target="_blank"> University of Culcutta </a></td>
+                            <td>2021</td>
+                            <td>Focused on geographic data visualization and cartography.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    
+<!-- Certifications Section -->
+    <section class="achievements py-5 bg-light" id="achievements">
+        <div class="container">
+            <h2 class="text-center mb-4">Certifications</h2>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <a href="https://drive.google.com/file/d/1nvHlGpGuWbj87qIALSPRdvo8cWCM8kHn/view?usp=drive_link" target="_blank">BASIC OF IMAGE INTERPRETATION CONDUCTED BY PGRS DIVISION OF GSI TRAINING 
+                        INSTITUE </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://drive.google.com/file/d/1ENPxp9enWvqKQ_bu3zIDgaq1fdHgW8mL/view?usp=drive_link" target="_blank">CLIMATE CHANGE IMPACTS ON WATER RESOURCES CONDUCTED BY SUKANTA 
+                        MAHAVIDYALAYA, DHUPGURI</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <h2 class="text-center mb-4">Connect With Me</h2>
+    <div class="contact-section">
+        <a href="mailto:saha94818@gmail.com" target="_blank" class="contact-icon">
+          <img src="gmail-logo.jpg" alt="Gmail">
+        </a>
+        <a href="https://www.linkedin.com/in/sagarsaha1999/" target="_blank" class="contact-icon">
+          <img src="linkedin-logo.jpg" alt="LinkedIn">
+        </a>
+        <a href="tel:9163095849" class="contact-icon">
+          <img src="call-logo.jpg" alt="Phone">
+        </a>
+        <a href="https://wa.me/919163095849" target="_blank" class="contact-icon">
+          <img src="whatsapp-logo.jpg" alt="WhatsApp">
+        </a>
+      </div>
+      
+      <style>
+        .contact-section {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+          margin-top: 50px;
+        }
+      
+        .contact-icon img {
+          width: 60px;
+          height: 60px;
+          transition: transform 0.3s ease;
+        }
+      
+        .contact-icon img:hover {
+          transform: scale(1.2);
+        }
+      </style>
+      
+    
+    
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sagar Saha. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
